@@ -1,0 +1,21 @@
+{
+  "type": "apidef",
+  "files": [
+    {
+      "file": "api-060065acccad40ac6a5f1c43dce0a716.json",
+      "oas": {}
+    },
+    {
+      "file": "api-7e9fc0eeb46f48525a54bd73de79c154.json",
+      "oas": {}
+    },
+    {
+      "file": "oas-d914d8afa7924fa6623162febc8851bb.json",
+      "oas": {}
+    },
+    {
+      "file": "oas-7d0a59c60b094d936b0a2a23daf0eebe.json",
+      "oas": {}
+    }
+  ]
+}

@@ -277,28 +277,7 @@
       }
     },
     "uptime_tests": {
-      "check_list": [
-        {
-          "url": "http://toys/get",
-          "protocol": "",
-          "timeout": 0,
-          "enable_proxy_protocol": false,
-          "commands": [],
-          "method": "GET",
-          "headers": {},
-          "body": ""
-        },
-        {
-          "url": "http://toys2/get",
-          "protocol": "",
-          "timeout": 0,
-          "enable_proxy_protocol": false,
-          "commands": [],
-          "method": "GET",
-          "headers": {},
-          "body": ""
-        }
-      ],
+      "check_list": [],
       "config": {
         "expire_utime_after": 0,
         "service_discovery": {
@@ -328,7 +307,7 @@
         "http://toys",
         "http://toys2"
       ],
-      "check_host_against_uptime_tests": true,
+      "check_host_against_uptime_tests": false,
       "service_discovery": {
         "use_discovery_service": false,
         "query_endpoint": "",
@@ -475,7 +454,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-12T06:42:31.867745Z",
+        "updated_at": "2024-07-12T13:04:36.726356Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},

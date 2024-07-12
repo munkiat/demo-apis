@@ -425,16 +425,99 @@
       "enabled": true,
       "execution_mode": "executionEngine",
       "version": "2",
-      "schema": "type Query {\n  default: String\n}\n\ntype Mutation {\n  default: String\n}",
-      "last_schema_update": "2024-07-12T12:30:28.901594Z",
+      "schema": "type Query {\n  country(code: ID!): Country\n}\n\ntype Country {\n  awsRegion: String!\n  capital: String\n  code: ID!\n  currencies: [String!]!\n  currency: String\n  emoji: String!\n  emojiU: String!\n  name(lang: String): String!\n  native: String!\n  phone: String!\n  phones: [String!]!\n  weather: Weather\n  exchange: Fx\n}\n\ntype Weather {\n  temperature: String\n  wind: String\n  description: String\n}\n\ntype Fx {\n  amount: Float\n  base: String\n  date: String\n  rates: Rates\n}\n\ntype Rates {\n  AUD: Float\n  CNY: Float\n  MYR: Float\n\n}",
+      "last_schema_update": "2024-07-12T13:13:38.756627Z",
       "type_field_configurations": [],
       "playground": {
         "enabled": false,
         "path": ""
       },
       "engine": {
-        "field_configs": [],
-        "data_sources": [],
+        "field_configs": [
+          {
+            "type_name": "Query",
+            "field_name": "country",
+            "disable_default_mapping": false,
+            "path": [
+              "country"
+            ]
+          },
+          {
+            "type_name": "Country",
+            "field_name": "weather",
+            "disable_default_mapping": true,
+            "path": [
+              ""
+            ]
+          },
+          {
+            "type_name": "Country",
+            "field_name": "exchange",
+            "disable_default_mapping": true,
+            "path": [
+              ""
+            ]
+          }
+        ],
+        "data_sources": [
+          {
+            "kind": "GraphQL",
+            "name": "country_Query",
+            "internal": false,
+            "root_fields": [
+              {
+                "type": "Query",
+                "fields": [
+                  "country"
+                ]
+              }
+            ],
+            "config": {
+              "url": "https://countries.trevorblades.com",
+              "method": "POST",
+              "body": "",
+              "headers": null
+            }
+          },
+          {
+            "kind": "REST",
+            "name": "weather_Country",
+            "internal": false,
+            "root_fields": [
+              {
+                "type": "Country",
+                "fields": [
+                  "weather"
+                ]
+              }
+            ],
+            "config": {
+              "url": "https://goweather.herokuapp.com/weather/{{.object.code}}",
+              "method": "GET",
+              "body": "",
+              "headers": null
+            }
+          },
+          {
+            "kind": "REST",
+            "name": "exchange_Country",
+            "internal": false,
+            "root_fields": [
+              {
+                "type": "Country",
+                "fields": [
+                  "exchange"
+                ]
+              }
+            ],
+            "config": {
+              "url": "https://api.frankfurter.app/latest?from={{.object.currency}}",
+              "method": "GET",
+              "body": "",
+              "headers": null
+            }
+          }
+        ],
         "global_headers": []
       },
       "proxy": {
@@ -452,7 +535,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-12T12:30:28.90504Z",
+        "updated_at": "2024-07-12T13:14:20.169036Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},

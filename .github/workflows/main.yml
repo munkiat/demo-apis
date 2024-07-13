@@ -13,6 +13,7 @@ jobs:
     steps:
      - run: echo "starting sync"
      - run: echo "${{ runner.os }} operating system"
+     - run: echo "$dashboard_url"
      - name: Check Out
        uses: actions/checkout@v4
      - run: |

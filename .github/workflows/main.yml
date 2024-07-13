@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     env:
-      dashboard_url: https://universal-guitarist-adm.aws-use1.cloud-ara.tyk.io/
+      dashboard_url: ${{ secrets.DASHBOARD_URL }}
       dash_key: ${{ secrets.DASH_KEY }}
     runs-on: ubuntu-latest
     name: Deploy Tyk APIs

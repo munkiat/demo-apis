@@ -362,7 +362,7 @@
     },
     "session_lifetime": 0,
     "active": true,
-    "internal": true,
+    "internal": false,
     "auth_provider": {
       "name": "",
       "storage_engine": "",
@@ -451,7 +451,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-13T06:36:07.155596Z",
+        "updated_at": "2024-07-13T15:23:54.494377Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},

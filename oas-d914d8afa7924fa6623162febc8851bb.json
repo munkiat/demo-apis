@@ -48,6 +48,9 @@
         }
       },
       "server": {
+        "detailedTracing": {
+          "enabled": true
+        },
         "gatewayTags": {
           "enabled": true,
           "tags": [

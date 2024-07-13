@@ -75,6 +75,9 @@
         "detailedActivityLogs": {
           "enabled": true
         },
+        "detailedTracing": {
+          "enabled": true
+        },
         "gatewayTags": {
           "enabled": true,
           "tags": [

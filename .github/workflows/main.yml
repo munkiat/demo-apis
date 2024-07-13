@@ -21,4 +21,4 @@ jobs:
      - run: |
          sudo apt-get install tyk-sync=1.5.0
      - run: |
-         /opt/tyk-sync/tyk-sync sync -d="$dashboard" -s="$dash_key" -p="."
+         /opt/tyk-sync/tyk-sync sync -d="$dashboard_url" -s="$dash_key" -p="."

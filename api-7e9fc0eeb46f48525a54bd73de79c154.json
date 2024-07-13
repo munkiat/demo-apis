@@ -448,13 +448,13 @@
         "use_response_extensions": {
           "on_error_forwarding": false
         },
-        "request_headers_rewrite": null
+        "request_headers_rewrite": {}
       },
       "subgraph": {
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-13T05:57:59.362313Z",
+        "updated_at": "2024-07-13T06:23:52.28701Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},

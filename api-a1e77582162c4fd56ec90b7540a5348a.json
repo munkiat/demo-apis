@@ -1,12 +1,12 @@
 {
   "api_definition": {
-    "id": "669121e4019f4500018d93e3",
-    "name": "travel",
-    "slug": "travel",
+    "id": "66921fea1db3a90001f79fc5",
+    "name": "electronics",
+    "slug": "temp",
     "listen_port": 0,
     "protocol": "",
     "enable_proxy_protocol": false,
-    "api_id": "060065acccad40ac6a5f1c43dce0a716",
+    "api_id": "a1e77582162c4fd56ec90b7540a5348a",
     "org_id": "668f8266019f4500018d93d9",
     "use_keyless": true,
     "use_oauth2": false,
@@ -298,8 +298,8 @@
     },
     "proxy": {
       "preserve_host_header": false,
-      "listen_path": "/travel/",
-      "target_url": "",
+      "listen_path": "/electronics/",
+      "target_url": "http://electronics",
       "disable_strip_slash": true,
       "strip_listen_path": true,
       "enable_load_balancing": false,
@@ -362,7 +362,7 @@
     },
     "session_lifetime": 0,
     "active": true,
-    "internal": false,
+    "internal": true,
     "auth_provider": {
       "name": "",
       "storage_engine": "",
@@ -422,107 +422,23 @@
     "strip_auth_data": false,
     "enable_detailed_recording": false,
     "graphql": {
-      "enabled": true,
-      "execution_mode": "executionEngine",
+      "enabled": false,
+      "execution_mode": "proxyOnly",
       "version": "2",
-      "schema": "type Query {\n  country(code: ID!): Country\n}\n\ntype Country {\n  awsRegion: String!\n  capital: String\n  code: ID!\n  currencies: [String!]!\n  currency: String\n  emoji: String!\n  emojiU: String!\n  name(lang: String): String!\n  native: String!\n  phone: String!\n  phones: [String!]!\n  weather: Weather\n  exchange: Fx\n}\n\ntype Weather {\n  temperature: String\n  wind: String\n  description: String\n}\n\ntype Fx {\n  amount: Float\n  base: String\n  date: String\n  rates: Rates\n}\n\ntype Rates {\n  AUD: Float\n  CNY: Float\n  MYR: Float\n\n}",
-      "last_schema_update": "2024-07-12T13:13:38.756627Z",
+      "schema": "",
       "type_field_configurations": [],
       "playground": {
         "enabled": false,
         "path": ""
       },
       "engine": {
-        "field_configs": [
-          {
-            "type_name": "Query",
-            "field_name": "country",
-            "disable_default_mapping": false,
-            "path": [
-              "country"
-            ]
-          },
-          {
-            "type_name": "Country",
-            "field_name": "weather",
-            "disable_default_mapping": true,
-            "path": [
-              ""
-            ]
-          },
-          {
-            "type_name": "Country",
-            "field_name": "exchange",
-            "disable_default_mapping": true,
-            "path": [
-              ""
-            ]
-          }
-        ],
-        "data_sources": [
-          {
-            "kind": "GraphQL",
-            "name": "country_Query",
-            "internal": false,
-            "root_fields": [
-              {
-                "type": "Query",
-                "fields": [
-                  "country"
-                ]
-              }
-            ],
-            "config": {
-              "url": "https://countries.trevorblades.com",
-              "method": "POST",
-              "body": "",
-              "headers": null
-            }
-          },
-          {
-            "kind": "REST",
-            "name": "weather_Country",
-            "internal": false,
-            "root_fields": [
-              {
-                "type": "Country",
-                "fields": [
-                  "weather"
-                ]
-              }
-            ],
-            "config": {
-              "url": "https://goweather.herokuapp.com/weather/{{.object.code}}",
-              "method": "GET",
-              "body": "",
-              "headers": null
-            }
-          },
-          {
-            "kind": "REST",
-            "name": "exchange_Country",
-            "internal": false,
-            "root_fields": [
-              {
-                "type": "Country",
-                "fields": [
-                  "exchange"
-                ]
-              }
-            ],
-            "config": {
-              "url": "https://api.frankfurter.app/latest?from={{.object.currency}}",
-              "method": "GET",
-              "body": "",
-              "headers": null
-            }
-          }
-        ],
+        "field_configs": [],
+        "data_sources": [],
         "global_headers": []
       },
       "proxy": {
         "features": {
-          "use_immutable_headers": false
+          "use_immutable_headers": true
         },
         "auth_headers": {},
         "request_headers": {},
@@ -535,7 +451,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-13T06:23:52.215811Z",
+        "updated_at": "2024-07-13T06:36:07.155596Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},
@@ -545,8 +461,10 @@
         "disabled": false
       }
     },
-    "tags": [],
-    "detailed_tracing": false,
+    "tags": [
+      "gateway1"
+    ],
+    "detailed_tracing": true,
     "scopes": {
       "jwt": {},
       "oidc": {}

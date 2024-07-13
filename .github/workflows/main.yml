@@ -16,6 +16,7 @@ jobs:
      - run: echo "$dashboard_url"
      - name: Check Out
        uses: actions/checkout@v4
+     - run: ls -a
      - run: |
          curl -s https://packagecloud.io/install/repositories/tyk/tyk-sync/script.deb.sh | sudo bash
      - run: |

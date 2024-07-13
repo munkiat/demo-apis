@@ -18,6 +18,6 @@ jobs:
      - run: |
          curl -s https://packagecloud.io/install/repositories/tyk/tyk-sync/script.deb.sh | sudo bash
      - run: |
-         sudo apt-get install tyk-sync=1.5
+         sudo apt-get install tyk-sync=1.5.0
      - run: |
          /opt/tyk-sync/tyk-sync sync -d="$dashboard" -s="$dash_key" -p="."

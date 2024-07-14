@@ -25,10 +25,10 @@
     ],
     "x-tyk-api-gateway": {
       "info": {
-        "dbId": "668f82f1019f4500018d93dd",
+        "dbId": "6693a7d340d67600011574ef",
         "id": "7d0a59c60b094d936b0a2a23daf0eebe",
         "name": "checkProducts",
-        "orgId": "668f8266019f4500018d93d9",
+        "orgId": "6693a7a240d67600011574eb",
         "state": {
           "active": true
         }

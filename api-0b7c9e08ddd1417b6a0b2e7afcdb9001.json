@@ -1,13 +1,13 @@
 {
   "api_definition": {
-    "id": "669347d41db3a90001f79fc9",
+    "id": "6693a7d340d67600011574f0",
     "name": "elektronik",
     "slug": "elektronik",
     "listen_port": 0,
     "protocol": "",
     "enable_proxy_protocol": false,
     "api_id": "0b7c9e08ddd1417b6a0b2e7afcdb9001",
-    "org_id": "668f8266019f4500018d93d9",
+    "org_id": "6693a7a240d67600011574eb",
     "use_keyless": true,
     "use_oauth2": false,
     "use_openid": false,
@@ -451,7 +451,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-14T04:10:07.04117Z",
+        "updated_at": "2024-07-14T10:26:27.589939Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},

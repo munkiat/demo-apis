@@ -58,7 +58,7 @@
                 },
                 {
                   "condition": "all",
-                  "rewriteTo": "tyk://electronics/images/png",
+                  "rewriteTo": "tyk://elektronik/images/png",
                   "rules": [
                     {
                       "in": "requestBody",

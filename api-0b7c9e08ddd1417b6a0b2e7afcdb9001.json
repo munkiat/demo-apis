@@ -1,12 +1,12 @@
 {
   "api_definition": {
-    "id": "66921fea1db3a90001f79fc5",
-    "name": "electronics",
-    "slug": "temp",
+    "id": "669347d41db3a90001f79fc9",
+    "name": "elektronik",
+    "slug": "elektronik",
     "listen_port": 0,
     "protocol": "",
     "enable_proxy_protocol": false,
-    "api_id": "a1e77582162c4fd56ec90b7540a5348a",
+    "api_id": "0b7c9e08ddd1417b6a0b2e7afcdb9001",
     "org_id": "668f8266019f4500018d93d9",
     "use_keyless": true,
     "use_oauth2": false,
@@ -298,8 +298,8 @@
     },
     "proxy": {
       "preserve_host_header": false,
-      "listen_path": "/electronics/",
-      "target_url": "http://electronics",
+      "listen_path": "/elektronik/",
+      "target_url": "http://httpbin",
       "disable_strip_slash": true,
       "strip_listen_path": true,
       "enable_load_balancing": false,
@@ -451,7 +451,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-13T15:23:54.494377Z",
+        "updated_at": "2024-07-14T04:10:07.04117Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},
@@ -464,7 +464,7 @@
     "tags": [
       "gateway1"
     ],
-    "detailed_tracing": true,
+    "detailed_tracing": false,
     "scopes": {
       "jwt": {},
       "oidc": {}

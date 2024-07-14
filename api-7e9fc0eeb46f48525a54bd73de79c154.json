@@ -2,7 +2,7 @@
   "api_definition": {
     "id": "6690c416019f4500018d93e1",
     "name": "toys",
-    "slug": "temp",
+    "slug": "toys",
     "listen_port": 0,
     "protocol": "",
     "enable_proxy_protocol": false,
@@ -454,7 +454,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-13T06:23:52.28701Z",
+        "updated_at": "2024-07-14T03:59:48.735026Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},

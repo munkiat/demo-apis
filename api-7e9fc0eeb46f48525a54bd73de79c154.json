@@ -277,7 +277,28 @@
       }
     },
     "uptime_tests": {
-      "check_list": [],
+      "check_list": [
+        {
+          "url": "http://toys/get",
+          "protocol": "",
+          "timeout": 0,
+          "enable_proxy_protocol": false,
+          "commands": [],
+          "method": "GET",
+          "headers": {},
+          "body": ""
+        },
+        {
+          "url": "http://toys2/get",
+          "protocol": "",
+          "timeout": 0,
+          "enable_proxy_protocol": false,
+          "commands": [],
+          "method": "GET",
+          "headers": {},
+          "body": ""
+        }
+      ],
       "config": {
         "expire_utime_after": 0,
         "service_discovery": {
@@ -307,7 +328,7 @@
         "http://toys",
         "http://toys2"
       ],
-      "check_host_against_uptime_tests": false,
+      "check_host_against_uptime_tests": true,
       "service_discovery": {
         "use_discovery_service": false,
         "query_endpoint": "",
@@ -377,7 +398,27 @@
       "meta": {}
     },
     "event_handlers": {
-      "events": {}
+      "events": {
+        "HostDown": [
+          {
+            "handler_name": "eh_web_hook_handler",
+            "handler_meta": {
+              "api_model": {},
+              "event_timeout": 10,
+              "header_map": {
+                "x-tyk-event": "something"
+              },
+              "id": "6694a91edbcc570001bff4c1",
+              "method": "GET",
+              "name": "Notifications",
+              "org_id": "6693a7a240d67600011574eb",
+              "target_path": "https://webhook.site/1f271fb1-b064-4f6c-a91c-81d079f4db46",
+              "template_path": "",
+              "webhook_id": "22d09b4c863e461195889edb4826e90d"
+            }
+          }
+        ]
+      }
     },
     "enable_batch_request_support": false,
     "enable_ip_whitelisting": false,
@@ -454,7 +495,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-14T10:26:27.510359Z",
+        "updated_at": "2024-07-15T04:44:51.571959Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},
@@ -478,7 +519,26 @@
       "providers": []
     }
   },
-  "hook_references": [],
+  "hook_references": [
+    {
+      "event_name": "HostDown",
+      "event_timeout": 10,
+      "hook": {
+        "api_model": {},
+        "event_timeout": 0,
+        "header_map": {
+          "x-tyk-event": "something"
+        },
+        "id": "6694a91edbcc570001bff4c1",
+        "method": "GET",
+        "name": "Notifications",
+        "org_id": "6693a7a240d67600011574eb",
+        "target_path": "https://webhook.site/1f271fb1-b064-4f6c-a91c-81d079f4db46",
+        "template_path": "",
+        "webhook_id": "22d09b4c863e461195889edb4826e90d"
+      }
+    }
+  ],
   "is_site": false,
   "sort_by": 0,
   "user_group_owners": [],

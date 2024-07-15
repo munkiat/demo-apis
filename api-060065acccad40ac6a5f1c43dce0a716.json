@@ -457,6 +457,14 @@
             "path": [
               ""
             ]
+          },
+          {
+            "type_name": "Country",
+            "field_name": "native",
+            "disable_default_mapping": true,
+            "path": [
+              ""
+            ]
           }
         ],
         "data_sources": [
@@ -516,6 +524,25 @@
               "body": "",
               "headers": null
             }
+          },
+          {
+            "kind": "REST",
+            "name": "native_Country",
+            "internal": true,
+            "root_fields": [
+              {
+                "type": "Country",
+                "fields": [
+                  "native"
+                ]
+              }
+            ],
+            "config": {
+              "url": "tyk://7e9fc0eeb46f48525a54bd73de79c154/get",
+              "method": "POST",
+              "body": "",
+              "headers": null
+            }
           }
         ],
         "global_headers": []
@@ -535,7 +562,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-14T10:26:27.442579Z",
+        "updated_at": "2024-07-15T07:05:06.118792Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},

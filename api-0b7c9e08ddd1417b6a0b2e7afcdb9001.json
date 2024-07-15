@@ -262,6 +262,25 @@
           },
           "use_extended_paths": true,
           "extended_paths": {
+            "hard_timeouts": [
+              {
+                "disabled": false,
+                "path": "/images/png",
+                "method": "GET",
+                "timeout": 1
+              }
+            ],
+            "circuit_breakers": [
+              {
+                "disabled": false,
+                "path": "/images/png",
+                "method": "GET",
+                "threshold_percent": 0.2,
+                "samples": 5,
+                "return_to_service_after": 10,
+                "disable_half_open_state": false
+              }
+            ],
             "persist_graphql": []
           },
           "global_headers": {},
@@ -374,7 +393,46 @@
       "meta": {}
     },
     "event_handlers": {
-      "events": {}
+      "events": {
+        "BreakerTriggered": [
+          {
+            "handler_name": "eh_web_hook_handler",
+            "handler_meta": {
+              "api_model": {},
+              "event_timeout": 10,
+              "header_map": {
+                "x-tyk-event": "something"
+              },
+              "id": "6694a91edbcc570001bff4c1",
+              "method": "GET",
+              "name": "Notifications",
+              "org_id": "6693a7a240d67600011574eb",
+              "target_path": "https://webhook.site/1f271fb1-b064-4f6c-a91c-81d079f4db46",
+              "template_path": "",
+              "webhook_id": "22d09b4c863e461195889edb4826e90d"
+            }
+          }
+        ],
+        "BreakerTripped": [
+          {
+            "handler_name": "eh_web_hook_handler",
+            "handler_meta": {
+              "api_model": {},
+              "event_timeout": 10,
+              "header_map": {
+                "x-tyk-event": "something"
+              },
+              "id": "6694a91edbcc570001bff4c1",
+              "method": "GET",
+              "name": "Notifications",
+              "org_id": "6693a7a240d67600011574eb",
+              "target_path": "https://webhook.site/1f271fb1-b064-4f6c-a91c-81d079f4db46",
+              "template_path": "",
+              "webhook_id": "22d09b4c863e461195889edb4826e90d"
+            }
+          }
+        ]
+      }
     },
     "enable_batch_request_support": false,
     "enable_ip_whitelisting": false,
@@ -451,7 +509,7 @@
         "sdl": ""
       },
       "supergraph": {
-        "updated_at": "2024-07-14T10:26:27.589939Z",
+        "updated_at": "2024-07-15T04:45:43.316309Z",
         "subgraphs": [],
         "merged_sdl": "",
         "global_headers": {},
@@ -475,7 +533,44 @@
       "providers": []
     }
   },
-  "hook_references": [],
+  "hook_references": [
+    {
+      "event_name": "BreakerTriggered",
+      "event_timeout": 10,
+      "hook": {
+        "api_model": {},
+        "event_timeout": 0,
+        "header_map": {
+          "x-tyk-event": "something"
+        },
+        "id": "6694a91edbcc570001bff4c1",
+        "method": "GET",
+        "name": "Notifications",
+        "org_id": "6693a7a240d67600011574eb",
+        "target_path": "https://webhook.site/1f271fb1-b064-4f6c-a91c-81d079f4db46",
+        "template_path": "",
+        "webhook_id": "22d09b4c863e461195889edb4826e90d"
+      }
+    },
+    {
+      "event_name": "BreakerTripped",
+      "event_timeout": 10,
+      "hook": {
+        "api_model": {},
+        "event_timeout": 0,
+        "header_map": {
+          "x-tyk-event": "something"
+        },
+        "id": "6694a91edbcc570001bff4c1",
+        "method": "GET",
+        "name": "Notifications",
+        "org_id": "6693a7a240d67600011574eb",
+        "target_path": "https://webhook.site/1f271fb1-b064-4f6c-a91c-81d079f4db46",
+        "template_path": "",
+        "webhook_id": "22d09b4c863e461195889edb4826e90d"
+      }
+    }
+  ],
   "is_site": false,
   "sort_by": 0,
   "user_group_owners": [],

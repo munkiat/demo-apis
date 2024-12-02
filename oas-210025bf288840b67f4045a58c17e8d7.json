@@ -1,0 +1,96 @@
+{
+  "oas": {
+    "components": {
+      "securitySchemes": {
+        "jwtAuth": {
+          "bearerFormat": "JWT",
+          "scheme": "bearer",
+          "type": "http"
+        }
+      }
+    },
+    "info": {
+      "title": "inventory",
+      "version": "1.0.0"
+    },
+    "openapi": "3.0.3",
+    "paths": {},
+    "security": [
+      {
+        "jwtAuth": []
+      }
+    ],
+    "servers": [
+      {
+        "url": "http://localhost:8080/inventory/"
+      }
+    ],
+    "x-tyk-api-gateway": {
+      "info": {
+        "dbId": "67497c120a90a300014ac0e1",
+        "id": "210025bf288840b67f4045a58c17e8d7",
+        "name": "inventory",
+        "orgId": "672879c7a6edf60001e1b6b4",
+        "state": {
+          "active": true
+        }
+      },
+      "middleware": {
+        "global": {
+          "contextVariables": {
+            "enabled": true
+          },
+          "trafficLogs": {
+            "enabled": true
+          }
+        }
+      },
+      "server": {
+        "authentication": {
+          "enabled": true,
+          "securitySchemes": {
+            "jwtAuth": {
+              "defaultPolicies": [
+                "67497c4e0a90a300014ac0e2"
+              ],
+              "enabled": true,
+              "header": {
+                "enabled": true,
+                "name": "Authorization"
+              },
+              "identityBaseField": "sub",
+              "policyFieldName": "pol",
+              "scopes": {
+                "claimName": "scp",
+                "scopeToPolicyMapping": [
+                  {
+                    "policyId": "6749a7360a90a300014ac0e4",
+                    "scope": "everything"
+                  },
+                  {
+                    "policyId": "67498eeb0a90a300014ac0e3",
+                    "scope": "images"
+                  }
+                ]
+              },
+              "signingMethod": "rsa",
+              "source": "aHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tLzA1YTc5YjM0LWNiYTAtNDFhNi1iNGJlLTVjNzE0NzQ2ODkwOC9kaXNjb3ZlcnkvdjIuMC9rZXlz"
+            }
+          }
+        },
+        "listenPath": {
+          "strip": true,
+          "value": "/inventory/"
+        }
+      },
+      "upstream": {
+        "url": "http://httpbin.org/"
+      }
+    }
+  },
+  "hook_references": [],
+  "is_site": false,
+  "sort_by": 0,
+  "user_group_owners": [],
+  "user_owners": []
+}

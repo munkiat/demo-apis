@@ -4,13 +4,13 @@
       "securitySchemes": {
         "authToken": {
           "in": "header",
-          "name": "Authorization",
+          "name": "APIKEY",
           "type": "apiKey"
         }
       }
     },
     "info": {
-      "title": "test",
+      "title": "MKAPI",
       "version": "1.0.0"
     },
     "openapi": "3.0.3",
@@ -22,14 +22,14 @@
     ],
     "servers": [
       {
-        "url": "http://localhost:8080/test/"
+        "url": "http://localhost:8080/mkapi/"
       }
     ],
     "x-tyk-api-gateway": {
       "info": {
-        "dbId": "67497b650a90a300014ac0e0",
-        "id": "d6d8ec58c93443d354a70d3aac0741f6",
-        "name": "test",
+        "dbId": "674d886d5816fd0001659464",
+        "id": "73d41ed329a348c47db87f1eaa731285",
+        "name": "MKAPI",
         "orgId": "672879c7a6edf60001e1b6b4",
         "state": {
           "active": true
@@ -54,32 +54,19 @@
             }
           }
         },
-        "detailedTracing": {
-          "enabled": true
-        },
-        "gatewayTags": {
-          "enabled": true,
-          "tags": [
-            "edge"
-          ]
-        },
         "listenPath": {
           "strip": true,
-          "value": "/test/"
+          "value": "/mkapi/"
         }
       },
       "upstream": {
-        "url": "http://httpbin.org/"
+        "url": "http://api.frankfurter.app/"
       }
     }
   },
   "hook_references": [],
   "is_site": false,
   "sort_by": 0,
-  "user_group_owners": [
-    "674d4bf55816fd0001659462"
-  ],
-  "user_owners": [
-    "672879c7a6edf60001e1b6b5"
-  ]
+  "user_group_owners": [],
+  "user_owners": []
 }

@@ -37,6 +37,11 @@
       },
       "middleware": {
         "global": {
+          "cache": {
+            "cacheAllSafeRequests": true,
+            "enabled": true,
+            "timeout": 20
+          },
           "contextVariables": {
             "enabled": true
           },
@@ -69,7 +74,7 @@
                   },
                   {
                     "policyId": "67498eeb0a90a300014ac0e3",
-                    "scope": "images"
+                    "scope": "images.read"
                   }
                 ]
               },

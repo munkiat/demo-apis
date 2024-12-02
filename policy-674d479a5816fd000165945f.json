@@ -1,0 +1,62 @@
+{
+  "_id": "674d479a5816fd000165945f",
+  "id": "674d479a5816fd000165945f",
+  "name": "Test API Product",
+  "org_id": "672879c7a6edf60001e1b6b4",
+  "rate": 1000,
+  "per": 60,
+  "quota_max": -1,
+  "quota_renewal_rate": -1,
+  "throttle_interval": -1,
+  "throttle_retry_limit": -1,
+  "max_query_depth": -1,
+  "access_rights": {
+    "d6d8ec58c93443d354a70d3aac0741f6": {
+      "api_name": "test",
+      "api_id": "d6d8ec58c93443d354a70d3aac0741f6",
+      "versions": [
+        ""
+      ],
+      "allowed_urls": [],
+      "restricted_types": [],
+      "allowed_types": [],
+      "limit": {
+        "rate": 0,
+        "per": 0,
+        "throttle_interval": 0,
+        "throttle_retry_limit": 0,
+        "max_query_depth": 0,
+        "quota_max": 0,
+        "quota_renews": 0,
+        "quota_remaining": 0,
+        "quota_renewal_rate": 0
+      },
+      "field_access_rights": [],
+      "disable_introspection": false,
+      "allowance_scope": ""
+    }
+  },
+  "hmac_enabled": false,
+  "enable_http_signature_validation": false,
+  "active": true,
+  "is_inactive": false,
+  "tags": [],
+  "key_expires_in": 0,
+  "partitions": {
+    "quota": false,
+    "rate_limit": false,
+    "complexity": false,
+    "acl": true,
+    "per_api": false
+  },
+  "last_updated": "1733117850",
+  "meta_data": {},
+  "graphql_access_rights": null,
+  "smoothing": {
+    "enabled": false,
+    "threshold": 500,
+    "trigger": 0.8,
+    "step": 100,
+    "delay": 30
+  }
+}
